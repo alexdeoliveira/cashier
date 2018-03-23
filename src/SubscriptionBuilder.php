@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Cashier;
+namespace Alexdeoliveira\Cashier;
 
 use Carbon\Carbon;
 
@@ -145,7 +145,7 @@ class SubscriptionBuilder
      * Add a new Stripe subscription to the user.
      *
      * @param  array  $options
-     * @return \Laravel\Cashier\Subscription
+     * @return \Alexdeoliveira\Cashier\Subscription
      */
     public function add(array $options = [])
     {
@@ -157,7 +157,7 @@ class SubscriptionBuilder
      *
      * @param  string|null  $token
      * @param  array  $options
-     * @return \Laravel\Cashier\Subscription
+     * @return \Alexdeoliveira\Cashier\Subscription
      */
     public function create($token = null, array $options = [])
     {

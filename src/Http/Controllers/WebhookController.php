@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Cashier\Http\Controllers;
+namespace Alexdeoliveira\Cashier\Http\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
@@ -58,7 +58,7 @@ class WebhookController extends Controller
      * Get the billable entity instance by Stripe ID.
      *
      * @param  string  $stripeId
-     * @return \Laravel\Cashier\Billable
+     * @return \Alexdeoliveira\Cashier\Billable
      */
     protected function getUserByStripeId($stripeId)
     {

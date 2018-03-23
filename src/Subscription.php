@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Cashier;
+namespace Alexdeoliveira\Cashier;
 
 use Carbon\Carbon;
 use LogicException;

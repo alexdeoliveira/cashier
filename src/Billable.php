@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Cashier;
+namespace Alexdeoliveira\Cashier;
 
 use Exception;
 use Carbon\Carbon;
@@ -113,7 +113,7 @@ trait Billable
      *
      * @param  string  $subscription
      * @param  string  $plan
-     * @return \Laravel\Cashier\SubscriptionBuilder
+     * @return \Alexdeoliveira\Cashier\SubscriptionBuilder
      */
     public function newSubscription($subscription, $plan)
     {
@@ -180,7 +180,7 @@ trait Billable
      * Get a subscription instance by name.
      *
      * @param  string  $subscription
-     * @return \Laravel\Cashier\Subscription|null
+     * @return \Alexdeoliveira\Cashier\Subscription|null
      */
     public function subscription($subscription = 'default')
     {
@@ -223,7 +223,7 @@ trait Billable
     /**
      * Get the entity's upcoming invoice.
      *
-     * @return \Laravel\Cashier\Invoice|null
+     * @return \Alexdeoliveira\Cashier\Invoice|null
      */
     public function upcomingInvoice()
     {
@@ -242,7 +242,7 @@ trait Billable
      * Find an invoice by ID.
      *
      * @param  string  $id
-     * @return \Laravel\Cashier\Invoice|null
+     * @return \Alexdeoliveira\Cashier\Invoice|null
      */
     public function findInvoice($id)
     {
@@ -257,7 +257,7 @@ trait Billable
      * Find an invoice or throw a 404 error.
      *
      * @param  string  $id
-     * @return \Laravel\Cashier\Invoice
+     * @return \Alexdeoliveira\Cashier\Invoice
      */
     public function findInvoiceOrFail($id)
     {

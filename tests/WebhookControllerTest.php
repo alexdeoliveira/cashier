@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-use Laravel\Cashier\Http\Controllers\WebhookController;
+use Alexdeoliveira\Cashier\Http\Controllers\WebhookController;
 
 class WebhookControllerTest extends PHPUnit_Framework_TestCase
 {
