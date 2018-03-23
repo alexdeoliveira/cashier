@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Invoice</title>
+    <title>Fatura</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -66,15 +66,15 @@
         </tr>
         <tr valign="top">
             <td style="font-size:28px;color:#cccccc;">
-                    Receipt
+                    Recibo
             </td>
 
             <!-- Organization Name / Date -->
             <td>
                 <br><br>
-                <strong>To:</strong> {{ $user->email ?: $user->name }}
+                <strong>Para:</strong> {{ $user->email ?: $user->name }}
                 <br>
-                <strong>Date:</strong> {{ $invoice->date()->toFormattedDateString() }}
+                <strong>Data:</strong> {{ $invoice->date()->toFormattedDateString() }}
             </td>
         </tr>
         <tr valign="top">
@@ -97,8 +97,8 @@
             <td>
                 <!-- Invoice Info -->
                 <p>
-                    <strong>Product:</strong> {{ $product }}<br>
-                    <strong>Invoice Number:</strong> {{ $id or $invoice->id }}<br>
+                    <strong>Produto:</strong> {{ $product }}<br>
+                    <strong>Número do recibo:</strong> {{ $id or $invoice->id }}<br>
                 </p>
 
                 <!-- Extra / VAT Information -->
@@ -113,14 +113,14 @@
                 <!-- Invoice Table -->
                 <table width="100%" class="table" border="0">
                     <tr>
-                        <th align="left">Description</th>
-                        <th align="right">Date</th>
-                        <th align="right">Amount</th>
+                        <th align="left">Descrição</th>
+                        <th align="right">Data</th>
+                        <th align="right">Montante</th>
                     </tr>
 
                     <!-- Existing Balance -->
                     <tr>
-                        <td>Starting Balance</td>
+                        <td>Saldo inicial</td>
                         <td>&nbsp;</td>
                         <td>{{ $invoice->startingBalance() }}</td>
                     </tr>
@@ -136,7 +136,7 @@
                     <!-- Display The Subscriptions -->
                     @foreach ($invoice->subscriptions() as $subscription)
                         <tr>
-                            <td>Subscription ({{ $subscription->quantity }})</td>
+                            <td>Plano ({{ $subscription->quantity }})</td>
                             <td>
                                 {{ $subscription->startDateAsCarbon()->formatLocalized('%B %e, %Y') }} -
                                 {{ $subscription->endDateAsCarbon()->formatLocalized('%B %e, %Y') }}
@@ -161,7 +161,7 @@
                     <!-- Display The Tax Amount -->
                     @if ($invoice->tax_percent)
                         <tr>
-                            <td>Tax ({{ $invoice->tax_percent }}%)</td>
+                            <td>Taxa ({{ $invoice->tax_percent }}%)</td>
                             <td>&nbsp;</td>
                             <td>{{ Laravel\Cashier\Cashier::formatAmount($invoice->tax) }}</td>
                         </tr>
