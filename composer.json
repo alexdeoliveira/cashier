@@ -1,16 +1,16 @@
 {
-    "name": "laravel/cashier",
+    "name": "alexdeoliveira/cashier",
     "description": "Laravel Cashier provides an expressive, fluent interface to Stripe's subscription billing services.",
     "keywords": ["laravel", "stripe", "billing"],
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/laravel/cashier/issues",
-        "source": "https://github.com/laravel/cashier"
+        "issues": "https://github.com/alexdeoliveira/cashier/issues",
+        "source": "https://github.com/alexdeoliveira/cashier"
     },
     "authors": [
         {
-            "name": "Taylor Otwell",
-            "email": "taylorotwell@gmail.com"
+            "name": "Alex de Oliveira",
+            "email": "alex.oliveira.web@gmail.com"
         }
     ],
     "require": {
